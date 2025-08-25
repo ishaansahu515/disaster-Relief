@@ -9,6 +9,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import ResourceList from './components/resources/ResourceList';
 import RequestList from './components/requests/RequestList';
 import AdminPanel from './components/admin/AdminPanel';
+import CriticalRequestsPage from './components/requests/CriticalRequestsPage';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           {/* Public Routes */}
           <Route path="/login" element={<LoginForm />} />
           <Route path="/register" element={<RegisterForm />} />
-          
+
           {/* Protected Routes */}
           <Route
             path="/*"
@@ -28,6 +29,7 @@ function App() {
                   <Header />
                   <Routes>
                     <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/critical-requests" element={<CriticalRequestsPage />} />
                     <Route path="/resources" element={<ResourceList />} />
                     <Route path="/requests" element={<RequestList />} />
                     <Route 
